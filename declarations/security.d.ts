@@ -27,7 +27,10 @@ declare function forceinsecure(): void;
  * @see https://wow.gamepedia.com/API_issecurevariable
  * @tupleReturn
  */
-declare function issecurevariable(table?: object, variableName?: string): [boolean, string];
+declare function issecurevariable(
+  table?: object,
+  variableName?: string
+): [boolean, string];
 
 /**
  * Calls the specified function without propagating taint to the caller
@@ -37,7 +40,10 @@ declare function issecurevariable(table?: object, variableName?: string): [boole
  * @returns the function's return values
  * @see https://wow.gamepedia.com/API_securecall
  */
-declare function securecall(call: string | ((...args: any[]) => any), ...args: any[]): any;
+declare function securecall(
+  call: string | ((...args: any[]) => any),
+  ...args: any[]
+): any;
 
 /**
  * Creates a secure "post hook" for the specified function. Your hook will be called with the same arguments after the original call is performed
@@ -47,7 +53,11 @@ declare function securecall(call: string | ((...args: any[]) => any), ...args: a
  * @param handler your hook function
  * @see https://wow.gamepedia.com/API_hooksecurefunc
  */
-declare function hooksecurefunc(table?: object, functionName?: string, handler?: (...args: any[]) => any): void;
+declare function hooksecurefunc(
+  table?: object,
+  functionName?: string,
+  handler?: (...args: any[]) => any
+): void;
 
 /**
  * Determines whether in-combat lockdown restrictions are active

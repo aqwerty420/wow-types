@@ -1,8 +1,8 @@
 /** @noSelfInFile */
 
 declare namespace WoWAPI {
-    type QuestType = "required" | "reward" | "choice";
-    type QuestState = "OFFER" | "COMPLETE";
+  type QuestType = 'required' | 'reward' | 'choice';
+  type QuestState = 'OFFER' | 'COMPLETE';
 }
 
 /**
@@ -34,7 +34,10 @@ declare function AcknowledgeAutoAcceptQuest(): void;
  * @param type popup type, one of "OFFER" or "COMPLETE"
  * @see https://wow.gamepedia.com/API_AddAutoQuestPopUp
  */
-declare function AddAutoQuestPopUp(questId: number, type: WoWAPI.QuestState): void;
+declare function AddAutoQuestPopUp(
+  questId: number,
+  type: WoWAPI.QuestState
+): void;
 
 /**
  * Adds a quest to the list of quests being watched with an optional time to watch it

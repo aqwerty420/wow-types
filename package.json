@@ -1,28 +1,30 @@
 {
-  "author": {
-    "name": "wartoshika",
-    "email": "dev@qhun.de"
+  "name": "wow-types",
+  "version": "1.0.0",
+  "description": "Types for WOW",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqwerty420/wow-types"
   },
-  "description": "Typescript declarations for the current live World of Warcraft LUA API",
-  "keywords": [
-    "wow",
-    "lua",
-    "wartoshika",
-    "qhun"
-  ],
-  "license": "MIT",
+  "author": "AQ",
+  "bugs": {
+    "url": "https://github.com/aqwerty420/wow-types/issues"
+  },
+  "homepage": "https://github.com/aqwerty420/wow-types#readme",
   "main": "declarations/index.d.ts",
-  "name": "@wartoshika/wow-declarations",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postversion": "git push github --follow-tags",
-    "lint": "tslint -c tslint.json declarations/**/*.d.ts",
-    "lint:fix": "tslint -c tslint.json --fix declarations/**/*.d.ts"
-  },
   "types": "declarations/index.d.ts",
-  "version": "9.0.5-release.2",
+  "scripts": {
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts . --fix"
+  },
   "devDependencies": {
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.3"
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "tslib": "^2.5.0",
+    "typescript": "4.9.4"
   }
 }
